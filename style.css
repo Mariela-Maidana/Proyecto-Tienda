@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FCEEDD;
+}
+
+
+/*----------------------------
+ COMIENZA BARRA DE NAVEGACION
+----------------------------*/
+
+.icono-ada {
+    padding-left: 14%;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#letra-carrito {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    padding-right: 14%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.barra-navegacion {
+    width: 100%;
+    height: 65px;
+    padding: 10 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*----------------------------
+ FINALIZA BARRA DE NAVEGACION
+----------------------------*/
+
+
+/*----------------------------
+      COMIENZA EL HEADER
+----------------------------*/
+
+header {
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: burlywood;
+}
+
+
+/*----------------------------
+      FINALIZA EL HEADER
+----------------------------*/
+
+
+/*----------------------------
+     ¡¡¡ SECCIONES!!!
+----------------------------*/
+
+section {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+}
+
+.principal-section {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*----------------------------
+    ¡¡¡EMPIEZA EL ASIDEE!!!
+----------------------------*/
+
+#aside-filter {
+    margin-top: 20px;
+    padding: 0 35px 15px;
+    flex: 1;
+}
+
+
+/*---------FILTROS---------*/
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*-------FINALIZA FILTROS-------*/
+
+
+/*---------BÚSQUEDA------------*/
+
+.search {
+    background: transparent;
+    border: none;
+    padding-left: 20px;
+    border-bottom: 2px solid black;
+    height: 35px;
+}
+
+.fa-search {
+    margin-left: 15px;
+    position: relative;
+    left: 136px;
+    transform: translateY(-160%);
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.points {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.fa-star {
+    color: #fbc02d;
+}
+
+.stars-input {
+    margin-right: 9px;
+}
+
+
+/*-----FINALIZA BÚSQUEDA-------*/
+
+
+/*-----------------------------
+    ¡¡¡FINALIZA EL ASIDEEE!!!
+----------------------------*/
+
+.container {
+    padding: 2%;
+    padding-right: 1%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 5;
+}
+
+.container-barra {
+    background-color: white;
+    margin: 0 10px 10px;
+    max-height: 90px;
+    padding: 30px;
+    font-size: 17px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barra-right {
+    font-style: italic;
+    display: flex;
+}
+
+.icons-barra {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+
+/* -------TARJETAS --------*/
+
+.container-tarjetas {
+    background-color: white;
+    padding: 30px 25px;
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 300px;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.product-img-container {
+    height: 250px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*----------------------------
+      COMIENZA EL FOOTER
+----------------------------*/
+
+footer {
+    padding: 30px;
+    margin-top: 5%;
+    width: 100%;
+    background-color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/*----------------------------
+      FINALIZA EL FOOTER
+----------------------------*/

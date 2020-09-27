@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>Proyecto Módulo 2: Tienda </title>
+</head>
+
+<body>
+    <!--------------------------------------
+       AQUI COMIENZA BARRA DE NAVEGACION
+     -------------------------------------->
+    <nav class="barra-navegacion">
+        <div class="icono-ada">
+            <img src="images/iconoada.svg">
+            <p>ADA SHOP</p>
+        </div>
+        <div id="letra-carrito">
+            <button class="icons-barra">
+                <i class="fas fa-shopping-cart"></i>
+                </button>
+            <p>Carrito (0) items</p>
+
+        </div>
+    </nav>
+    <!-------------------------------------
+       AQUI FINALIZA BARRA DE NAVEGACION
+     ------------------------------------->
+
+
+    <!----------------------------
+         COMIENZA EL HEADER
+     ----------------------------->
+    <header>
+        <div>
+            <h1>ELECTRÓNICA</h1>
+        </div>
+    </header>
+    <!---------------------------
+         FINALIZA EL HEADER
+     ----------------------------->
+
+
+    <section class="principal-section">
+        <div id="aside-filter">
+            <aside>
+                <div>
+                    <div class="filter">
+                        <h2>FILTROS</h2>
+                        <button type="button">
+                            <i class="fas fa-trash-alt" aria-hidden="true" ></i>
+                            Limpiar
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <form>
+
+                        <label>  <h3>BÚSQUEDA</h3>
+                        <input type="text" name="Búsqueda" placeholder="Buscar productos" class="search" id="busqueda">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </div>
+
+                <div>
+                    <h3>CATEGORÍA</h3>
+
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="5" class="stars-input">
+                       <p>CONSOLAS</p>                        
+                    </label>
+
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="5" class="stars-input">
+                       <p>NOTEBOOKS</p>                        
+                    </label>
+
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="5" class="stars-input">
+                       <p>CÁMARAS</p>
+                    </label>
+
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="5" class="stars-input">
+                       <p>CELULARES</p>                        
+                    </label>
+
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="5" class="stars-input">
+                       <p>ACCESORIOS</p>                        
+                    </label>
+                </div>
+
+                <div>
+                    <h3>PUNTAJE</h3>
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="5" class="stars-input">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        (5)
+                    </label>
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="4" class="stars-input">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        (4)
+                    </label>
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="3" class="stars-input">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        (3)
+                    </label>
+                    <label for="Puntaje" class="points"> 
+                        <input type="checkbox" name="Puntaje" value="2" class="stars-input">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        (2)
+                    </label>
+                    <label for="Puntaje" class="points">
+                        <input type="checkbox" name="Puntaje" value="1" class="stars-input">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        (1)
+                    </label>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+        <section class="container">
+            <header class="container-barra">
+                <p>Mostrando 12 producto(s) de 12</p>
+                <div class="barra-right">
+                    <p>Ver como</p>
+                    <button class="icons-barra">
+                    <i class="fas fa-th"></i>
+                    </button>
+                    <button class="icons-barra">
+                    <i class="fas fa-list"></i>
+                </button>
+                </div>
+            </header>
+
+
+
+            <!------------TARJETAS------------->
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
+
+                <div class="product-img-container"><img src="images/xiaomi.jpg" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+
+            </article>
+
+            <article class="container-tarjetas" data-nombre="cosas" data-categoria="celulares" data-precio="22499" data-rating="5">
+                <div class="product-img-container"><img src="images/sony.png" class="product-img" />
+                </div>
+                <h3 class="product-name">Cosas</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="colores" data-categoria="celulares" data-precio="22499" data-rating="3">
+                <div class="product-img-container"><img src="images/switch.jpg" class="product-img" />
+                </div>
+                <h3 class="product-name">Colores</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="perros" data-categoria="celulares" data-precio="22499" data-rating="5">
+                <div class="product-img-container"><img src="images/xbox.jpg" class="product-img" />
+                </div>
+                <h3 class="product-name">Perros</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="4">
+                <div class="product-img-container"><img src="images/nikon.jpg" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
+                <div class="product-img-container"><img src="images/macbook.png" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="1">
+                <div class="product-img-container"><img src="images/msi.png" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
+                <div class="product-img-container"><img src="images/asus.png" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="2">
+                <div class="product-img-container"><img src="images/mouse.jpg" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
+                <div class="product-img-container"><img src="images/iphone.jpeg" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="4">
+                <div class="product-img-container"><img src="images/headphones.png" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+            <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="3">
+                <div class="product-img-container"><img src="images/ps4.jpg" class="product-img" />
+                </div>
+                <h3 class="product-name">Prueba</h3>
+                <p class="product-price">$ 22499</p>
+                <div class="review">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="buy-button">COMPRAR</button>
+                </div>
+            </article>
+
+
+
+            </div>
+        </section>
+
+    </section>
+
+
+
+    <!----------------------------
+      COMIENZA EL FOOTER
+----------------------------->
+    <footer>
+        <div class="footer-container">
+            <img src="images/iconoada.svg">
+            <p>ADA SHOP - Gracias por visitarnos </p>
+        </div>
+    </footer>
+    <!---------------------------
+    FINALIZA EL FOOTER
+----------------------------->
+
+
+    <script src="index.js"></script>
+</body>
