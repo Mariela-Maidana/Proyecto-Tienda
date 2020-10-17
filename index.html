@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <!--------------------------------------
        AQUI COMIENZA BARRA DE NAVEGACION
      -------------------------------------->
@@ -24,7 +25,6 @@
                 <i class="fas fa-shopping-cart"></i>
                 </button>
             <p>Carrito (0) items</p>
-
         </div>
     </nav>
     <!-------------------------------------
@@ -32,12 +32,17 @@
      ------------------------------------->
 
 
+
+
+
+
     <!----------------------------
          COMIENZA EL HEADER
      ----------------------------->
     <header>
-        <div>
-            <h1>ELECTRÓNICA</h1>
+        <div class="electronic-picture">
+            <h1 class="electronic">ELECTRÓNICA</h1>
+
         </div>
     </header>
     <!---------------------------
@@ -51,7 +56,7 @@
                 <div>
                     <div class="filter">
                         <h2>FILTROS</h2>
-                        <button type="button">
+                        <button type="button" id="tacho">
                             <i class="fas fa-trash-alt" aria-hidden="true" ></i>
                             Limpiar
                         </button>
@@ -60,16 +65,15 @@
 
                 <div>
                     <form>
-
                         <label>  <h3>BÚSQUEDA</h3>
                         <input type="text" name="Búsqueda" placeholder="Buscar productos" class="search" id="busqueda">
                         <i class="fas fa-search"></i>
                     </label>
                 </div>
 
+
                 <div>
                     <h3>CATEGORÍA</h3>
-
                     <label for="Puntaje" class="points">
                         <input type="checkbox" name="Puntaje" value="5" class="stars-input">
                        <p>CONSOLAS</p>                        
@@ -168,7 +172,8 @@
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
 
-                <div class="product-img-container"><img src="images/xiaomi.jpg" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/xiaomi.jpg" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -179,12 +184,13 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <button class="buy-button">COMPRAR</button>
+                <button type="button" class="buy-button" tabindex="0">COMPRAR</button>
 
             </article>
 
             <article class="container-tarjetas" data-nombre="cosas" data-categoria="celulares" data-precio="22499" data-rating="5">
-                <div class="product-img-container"><img src="images/sony.png" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/sony.png" class="product-img" />
                 </div>
                 <h3 class="product-name">Cosas</h3>
                 <p class="product-price">$ 22499</p>
@@ -200,7 +206,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="colores" data-categoria="celulares" data-precio="22499" data-rating="3">
-                <div class="product-img-container"><img src="images/switch.jpg" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/switch.jpg" class="product-img" />
                 </div>
                 <h3 class="product-name">Colores</h3>
                 <p class="product-price">$ 22499</p>
@@ -216,7 +223,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="perros" data-categoria="celulares" data-precio="22499" data-rating="5">
-                <div class="product-img-container"><img src="images/xbox.jpg" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/xbox.jpg" class="product-img" />
                 </div>
                 <h3 class="product-name">Perros</h3>
                 <p class="product-price">$ 22499</p>
@@ -232,7 +240,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="4">
-                <div class="product-img-container"><img src="images/nikon.jpg" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/nikon.jpg" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -248,7 +257,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
-                <div class="product-img-container"><img src="images/macbook.png" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/macbook.png" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -264,7 +274,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="1">
-                <div class="product-img-container"><img src="images/msi.png" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/msi.png" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -280,7 +291,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
-                <div class="product-img-container"><img src="images/asus.png" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/asus.png" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -296,7 +308,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="2">
-                <div class="product-img-container"><img src="images/mouse.jpg" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/mouse.jpg" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -312,7 +325,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="5">
-                <div class="product-img-container"><img src="images/iphone.jpeg" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/iphone.jpeg" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -328,7 +342,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="4">
-                <div class="product-img-container"><img src="images/headphones.png" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/headphones.png" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
@@ -344,7 +359,8 @@
             </article>
 
             <article class="container-tarjetas" data-nombre="prueba" data-categoria="celulares" data-precio="22499" data-rating="3">
-                <div class="product-img-container"><img src="images/ps4.jpg" class="product-img" />
+                <div class="product-img-container">
+                    <img src="images/ps4.jpg" class="product-img" />
                 </div>
                 <h3 class="product-name">Prueba</h3>
                 <p class="product-price">$ 22499</p>
