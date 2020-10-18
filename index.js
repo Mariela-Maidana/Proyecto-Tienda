@@ -2,36 +2,34 @@
 
 const filtroBusqueda = document.querySelector("#busqueda");
 const tarjetas = document.getElementsByTagName("article");
-const checkboxes = document.querySelectorAll("input[type='checkbox']");
-const BotonLimpiar = document.querySelector("#tacho");
-
+const checkboxesRating = document.getElementsByName("puntaje");
+const checkboxesCategoria = document.getElementsByName("categoria");
+const botonLimpiar = document.querySelector("#tacho");
+const botonCuadricula = document.getElementById("boton-cuadricula")
+const botonLista = document.getElementById("boton-lista")
+const listaArticulos = document.getElementById("lista-articulos")
+const listaDescripciones = document.querySelectorAll(".product-details-hide")
 
 
 filtroBusqueda.oninput = () => {
-    for (let tarjeta of tarjetas) {
-        const titulo = tarjeta.dataset.nombre.toLowerCase();
-        const busqueda = filtroBusqueda.value.toLowerCase();
-
-        if (titulo.includes(busqueda)) {
-            tarjeta.classList.remove('hidden');
-        } else {
-            tarjeta.classList.add('hidden');
-        }
-    }
-    tarjetasVisibles();
+    filtrarTarjetas();
 }
 
 
-
-for (let checkbox of checkboxes) {
-    checkbox.onclick = () => {
+for (let checkboxR of checkboxesRating) {
+    checkboxR.onclick = () => {
         filtrarTarjetas();
     };
 }
 
+for (let checkboxC of checkboxesCategoria) {
+    checkboxC.onclick = () => {
+        filtrarTarjetas();
+    };
+}
 
 const hayCkeckboxSeleccionado = () => {
-    for (let checkbox of checkboxes) {
+    for (let checkbox of checkboxesRating) {
         if (checkbox.checked) {
             return true
         }
@@ -42,7 +40,7 @@ const hayCkeckboxSeleccionado = () => {
 
 const coincidenCheckboxYTarjeta = tarjeta => {
     const rating = tarjeta.dataset.rating;
-    for (let checkbox of checkboxes) {
+    for (let checkbox of checkboxesRating) {
         if (checkbox.value === rating && checkbox.checked) {
             return true;
         }
@@ -53,30 +51,97 @@ const coincidenCheckboxYTarjeta = tarjeta => {
 
 const filtrarTarjetas = () => {
     for (let tarjeta of tarjetas) {
-        tarjeta.classList.add('hidden');
-        if (hayCkeckboxSeleccionado()) {
-            if (coincidenCheckboxYTarjeta(tarjeta)) {
-                tarjeta.classList.remove('hidden');
-            }
-        } else {
+        tarjeta.classList.add('hidden')
+        if (allFilters(tarjeta)) {
             tarjeta.classList.remove('hidden')
+        } else {
+            tarjeta.classList.add('hidden')
         }
     }
+    tarjetasVisibles();
 }
+
+const allFilters = (tarjeta) => {
+    let categoriaCheked = document.querySelectorAll('input[name="categoria"]:checked');
+    let ratingCheked = document.querySelectorAll('input[name="puntaje"]:checked');
+    return (
+        (pasaFiltroCategoria(tarjeta) || categoriaCheked.length <= 0) &&
+        (pasaFiltroRating(tarjeta) || ratingCheked.length <= 0) &&
+        (pasaFiltroBusqueda(tarjeta) || filtroBusqueda.length <= 0)
+    );
+}
+
+const pasaFiltroCategoria = (tarjeta) => {
+    const categoria = tarjeta.dataset.categoria;
+    const filtroCategoria = document.querySelector(`.categoria[value="${categoria}"]`)
+    if (filtroCategoria === null) {
+        return false
+    } else {
+        return filtroCategoria.checked
+    }
+}
+
+const pasaFiltroRating = (tarjeta) => {
+    const rating = tarjeta.dataset.rating;
+    const filtroRating = document.querySelector(`.rating[value="${rating}"]`)
+    if (filtroRating === null) {
+        return false
+    } else {
+        return filtroRating.checked
+    }
+}
+
+const pasaFiltroBusqueda = (tarjeta) => {
+    const texto = tarjeta.dataset.nombre.toLowerCase();
+    const busqueda = filtroBusqueda.value.toLowerCase()
+    return texto.includes(busqueda)
+}
+
+
 
 //   FIN DE FILTROSSSS   //
 
 
-
 // PARA LIMPIAR FILTROS//
 
-BotonLimpiar.onclick = () => {
+botonLimpiar.onclick = () => {
     filtroBusqueda.value = "";
 
-    for (let checkbox of checkboxes) {
-        checkbox.checked = false;
+    for (let checkboxR of checkboxesRating) {
+        checkboxR.checked = false;
     }
+    for (let checkboxC of checkboxesCategoria) {
+        checkboxC.checked = false;
+    }
+    for (let tarjeta of tarjetas) {
+        tarjeta.classList.remove('hidden');
+    }
+    tarjetasVisibles();
+}
 
+botonCuadricula.onclick = () => {
+    listaArticulos.classList.remove('tipo-vertical')
+    listaArticulos.classList.add('tipo-cuadricula')
+
+    for (let tarjeta of tarjetas) {
+        tarjeta.classList.remove('tarjeta-linea')
+    }
+    for (details of listaDescripciones) {
+        details.classList.add('product-details-hide')
+    }
+}
+
+
+botonLista.onclick = () => {
+    listaArticulos.classList.remove('tipo-cuadricula')
+    listaArticulos.classList.add('tipo-vertical')
+
+    for (let tarjeta of tarjetas) {
+        tarjeta.classList.add('tarjeta-linea')
+    }
+    for (details of listaDescripciones) {
+        details.classList.remove('product-details-hide')
+    }
 }
 
 
