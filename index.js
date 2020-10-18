@@ -9,8 +9,8 @@ const BotonLimpiar = document.querySelector("#tacho");
 
 filtroBusqueda.oninput = () => {
     for (let tarjeta of tarjetas) {
-        const titulo = tarjeta.dataset.nombre;
-        const busqueda = filtroBusqueda.value;
+        const titulo = tarjeta.dataset.nombre.toLowerCase();
+        const busqueda = filtroBusqueda.value.toLowerCase();
 
         if (titulo.includes(busqueda)) {
             tarjeta.classList.remove('hidden');
@@ -18,6 +18,7 @@ filtroBusqueda.oninput = () => {
             tarjeta.classList.add('hidden');
         }
     }
+    tarjetasVisibles();
 }
 
 
@@ -70,10 +71,21 @@ const filtrarTarjetas = () => {
 // PARA LIMPIAR FILTROS//
 
 BotonLimpiar.onclick = () => {
-    filtroBusqueda.value = ""
+    filtroBusqueda.value = "";
 
     for (let checkbox of checkboxes) {
-        checkbox.checked = false
+        checkbox.checked = false;
     }
 
+}
+
+
+//   MOSTRANDO PRODUCTOS   //
+
+const tarjetasVisibles = () => {
+    let tarjetasVisibles = 0;
+    for (let tarjeta of tarjetas) {
+        if (!tarjeta.className.includes('hidden')) tarjetasVisibles++;
+    }
+    document.getElementById("mostrando").innerHTML = `Mostrando ${tarjetasVisibles} producto(s) de ${tarjetas.length}`;
 }
