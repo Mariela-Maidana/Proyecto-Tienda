@@ -186,9 +186,13 @@ const pasaFiltroRating = (tarjeta) => {
 }
 
 const pasaFiltroBusqueda = (tarjeta) => {
-    const texto = tarjeta.dataset.nombre.toLowerCase();
-    const busqueda = filtroBusqueda.value.toLowerCase()
-    return texto.includes(busqueda)
+    if (tarjeta.dataset.nombre != undefined) {
+        const texto = tarjeta.dataset.nombre.toLowerCase();
+        const busqueda = filtroBusqueda.value.toLowerCase()
+        return texto.includes(busqueda);
+    }
+
+    return false;
 }
 
 
